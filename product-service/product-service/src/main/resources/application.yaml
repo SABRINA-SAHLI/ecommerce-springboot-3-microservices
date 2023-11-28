@@ -2,6 +2,29 @@ spring:
   application:
     name: product-service
   config:
-    import: "optional: configserver: http://localhost:8088"
+    import: "optional:configserver:http://localhost:8088"
 
 
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: admin
+    url: jdbc:mysql://localhost:3306/product-db
+    username: root
+  jpa:
+    show-sql: true
+    #generate-ddl: true
+    hibernate:
+      ddl-auto: update
+
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/product-db
+#    username: sabrina
+#    password: root
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    jpa:
+#      hibernate:
+#        ddl-auto=update: update
+#      properties:
+#        hibernate:
+#          dialect : org.hibernate.dialect.MySQL5Dialect
+#
